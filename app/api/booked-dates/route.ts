@@ -57,13 +57,6 @@ export async function GET() {
     return NextResponse.json({ bookedDates, availability, totalKayaks: TOTAL_KAYAKS });
   } catch (error) {
     console.error("Google Calendar error:", error);
-    return NextResponse.json({
-      bookedDates: [],
-      availability: [],
-      totalKayaks: TOTAL_KAYAKS,
-      debugError: error instanceof Error ? error.message : String(error),
-      debugHasJson: !!process.env.GOOGLE_SERVICE_ACCOUNT_JSON,
-      debugHasCalId: !!process.env.GOOGLE_CALENDAR_ID,
-    });
+    return NextResponse.json({ bookedDates: [], availability: [], totalKayaks: TOTAL_KAYAKS });
   }
 }
