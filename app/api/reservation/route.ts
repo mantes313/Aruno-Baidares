@@ -1,10 +1,10 @@
 import { google } from "googleapis";
 import { NextResponse } from "next/server";
+import { getGoogleCredentials } from "@/lib/google-auth";
 
 function getAuth() {
-  const credentials = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON!);
   return new google.auth.GoogleAuth({
-    credentials,
+    credentials: getGoogleCredentials(),
     scopes: ["https://www.googleapis.com/auth/calendar"],
   });
 }

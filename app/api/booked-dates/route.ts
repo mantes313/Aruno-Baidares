@@ -1,12 +1,12 @@
 import { google } from "googleapis";
 import { NextResponse } from "next/server";
+import { getGoogleCredentials } from "@/lib/google-auth";
 
 const TOTAL_KAYAKS = 13;
 
 function getAuth() {
-  const credentials = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON!);
   return new google.auth.GoogleAuth({
-    credentials,
+    credentials: getGoogleCredentials(),
     scopes: ["https://www.googleapis.com/auth/calendar.readonly"],
   });
 }
@@ -57,11 +57,6 @@ export async function GET() {
     return NextResponse.json({ bookedDates, availability, totalKayaks: TOTAL_KAYAKS });
   } catch (error) {
     console.error("Google Calendar error:", error);
-    return NextResponse.json({
-      bookedDates: [],
-      availability: [],
-      totalKayaks: TOTAL_KAYAKS,
-      debugError: error instanceof Error ? error.message : String(error),
-    });
+    return NextResponse.json({ bookedDates: [], availability: [], totalKayaks: TOTAL_KAYAKS });
   }
 }
