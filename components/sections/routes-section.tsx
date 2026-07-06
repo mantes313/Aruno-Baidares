@@ -55,10 +55,10 @@ export function RoutesSection() {
             Antra stotelė
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
-            Maršrutai
+            Baidarių maršrutai Šešupe
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Pasirinkite maršrutą pagal savo patirtį ir laiką. Kiekvienas maršrutas – unikalus nuotykis.
+            Pasirinkite baidarių maršrutą Suvalkijoje pagal savo patirtį ir laiką. Kiekvienas maršrutas – unikalus nuotykis.
           </p>
         </motion.div>
 

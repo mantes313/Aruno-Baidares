@@ -71,10 +71,10 @@ export function ReservationSection() {
             Galutinė stotelė
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
-            Laisvos datos
+            Rezervuokite baidarę Marijampolėje – laisvos datos
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Pasitikrinkite laisvas datas ir susisiekite su mumis rezervacijai.
+            Pasitikrinkite laisvas datas ir susisiekite su mumis dėl baidarių nuomos rezervacijos.
           </p>
         </motion.div>
 

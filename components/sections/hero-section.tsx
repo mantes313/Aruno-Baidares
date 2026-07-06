@@ -52,8 +52,8 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Išsinuomok{" "}
-          <span className="text-forest">baidarę</span>
+          Baidarių nuoma{" "}
+          <span className="text-forest">Marijampolėje</span>
         </motion.h1>
 
         <motion.p
@@ -62,7 +62,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Atraskite Lietuvos upių grožį. Įvairūs maršrutai laukia jūsų nuotykių.
+          Išsinuomokite baidarę ir atraskite Šešupės bei Suvalkijos upių grožį. Trys maršrutai laukia jūsų nuotykių.
         </motion.p>
 
         <motion.div

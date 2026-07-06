@@ -9,6 +9,7 @@ const navLinks = [
   { name: "Įranga", href: "#iranga" },
   { name: "Maršrutai", href: "#marsrutai" },
   { name: "Kainos", href: "#kainos" },
+  { name: "DUK", href: "#duk" },
 ];
 
 export function Header() {

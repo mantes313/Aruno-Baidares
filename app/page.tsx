@@ -6,15 +6,20 @@ import { RoutesSection } from "@/components/sections/routes-section";
 import { PricingSection } from "@/components/sections/pricing-section";
 import { ReservationSection } from "@/components/sections/reservation-section";
 import { ReviewsSection } from "@/components/sections/reviews-section";
+import { FaqSection } from "@/components/sections/faq-section";
+import { faqs } from "@/lib/faq-data";
 import { AnimatedKayakJourney } from "@/components/animated-kayak-journey";
 import { RiverPathOverlay } from "@/components/river-path-overlay";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://6upe.lt/#business",
   "name": "6upė – Baidarių Nuoma",
   "description": "Baidarių nuoma Marijampolėje ir Suvalkijoje. Plaukite Šešupe – 3 maršrutai.",
   "url": "https://6upe.lt",
+  "image": "https://6upe.lt/marsrutas-2.jpg",
+  "priceRange": "€25 - €30",
   "telephone": "+37066299001",
   "email": "baidares6upe@gmail.com",
   "address": {
@@ -49,8 +54,21 @@ const jsonLd = {
       "closes": "18:00"
     }
   ],
-  "areaServed": ["Marijampolė", "Suvalkija", "Liudvinavas"],
+  "areaServed": ["Marijampolė", "Suvalkija", "Liudvinavas", "Šešupė"],
   "keywords": "baidarių nuoma, baidarės Marijampolė, baidarės Suvalkija, Šešupė"
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer,
+    },
+  })),
 };
 
 export default function Home() {
@@ -59,6 +77,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {/* Fixed animated elements */}
       <RiverPathOverlay />
@@ -86,6 +108,9 @@ export default function Home() {
 
         {/* Reviews */}
         <ReviewsSection />
+
+        {/* FAQ */}
+        <FaqSection />
       </div>
 
       {/* Footer */}

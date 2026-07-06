@@ -40,10 +40,10 @@ export function EquipmentSection() {
             Pirma stotelė
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
-            Įranga
+            Baidarių nuomos įranga
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Viską, ko reikia saugiai ir maloniai kelionei, rasite pas mus.
+            Baidarių nuoma Marijampolėje apima viską, ko reikia saugiai ir maloniai kelionei Šešupe.
           </p>
         </motion.div>
 

@@ -113,7 +113,7 @@ function ReviewCard({ review }: { review: Review }) {
           {review.photos.map((url, i) => (
             <button key={i} onClick={() => setLightbox(i)} className="relative group">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={url} alt="" className="w-20 h-20 object-cover rounded-xl border border-border group-hover:opacity-80 transition-opacity" />
+              <img src={url} alt={`${review.name} atsiliepimo nuotrauka – baidarių nuoma Marijampolėje`} className="w-20 h-20 object-cover rounded-xl border border-border group-hover:opacity-80 transition-opacity" />
             </button>
           ))}
         </div>
@@ -192,10 +192,10 @@ export function ReviewsSection() {
             Bendruomenė
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
-            Atsiliepimai
+            Atsiliepimai apie baidarių nuomą Marijampolėje
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Pasidalinkite savo plaukimo patirtimi ir nuotraukomis.
+            Pasidalinkite savo plaukimo patirtimi Šešupe ir nuotraukomis.
           </p>
         </motion.div>
 

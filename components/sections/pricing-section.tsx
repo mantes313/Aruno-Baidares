@@ -43,7 +43,7 @@ export function PricingSection() {
             Trečia stotelė
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
-            Kainoraštis
+            Baidarių nuomos kainos Marijampolėje
           </h2>
         </motion.div>
 
