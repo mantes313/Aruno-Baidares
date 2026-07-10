@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { Star, ImagePlus, Send, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { NatureBackground } from "@/components/nature-decor";
 
 interface Review {
   id: string;
@@ -178,8 +179,9 @@ export function ReviewsSection() {
   };
 
   return (
-    <section id="atsiliepimai" className="relative py-24 md:py-32 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="atsiliepimai" className="relative py-24 md:py-32 bg-muted/30 overflow-hidden">
+      <NatureBackground treeSide="right" river="top" />
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <motion.div
           className="text-center mb-16"

@@ -2,7 +2,7 @@ export const faqs = [
   {
     question: "Kur galima išsinuomoti baidares Marijampolėje?",
     answer:
-      "Baidarių nuomą Marijampolėje ir visoje Suvalkijoje siūlome mes – 6upė. Baidares plukdome Šešupe trimis maršrutais (Jungėnai–Bukta, Bukta–Liudvinavas, Liudvinavas–Marijampolė), o mūsų bazė yra Liudvinave, Marijampolės savivaldybėje.",
+      "Baidarių nuomą Marijampolėje ir visoje Suvalkijoje siūlome mes – 6upė. Baidares plukdome Šešupe trimis maršrutais (Jungėnai–Bukta, Bukta–Liudvinavas, Liudvinavas–Marijampolė), o mes randamės Liudvinave, Marijampolės savivaldybėje.",
   },
   {
     question: "Kiek kainuoja baidarių nuoma Suvalkijoje?",

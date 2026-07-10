@@ -6,6 +6,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
 import { parseISO, isBefore, startOfToday, format } from "date-fns";
 import { lt } from "date-fns/locale";
+import { NatureBackground } from "@/components/nature-decor";
 
 interface DayAvailability {
   date: string;
@@ -57,8 +58,9 @@ export function ReservationSection() {
     : null;
 
   return (
-    <section id="rezervacija" className="relative py-24 md:py-32 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="rezervacija" className="relative py-24 md:py-32 bg-muted/30 overflow-hidden">
+      <NatureBackground treeSide="left" river="top" />
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section header */}
         <motion.div
           className="text-center mb-16"

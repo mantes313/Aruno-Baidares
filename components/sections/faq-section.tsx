@@ -4,13 +4,15 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { faqs } from "@/lib/faq-data";
+import { NatureBackground } from "@/components/nature-decor";
 
 export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="duk" className="relative py-24 md:py-32 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="duk" className="relative py-24 md:py-32 bg-muted/30 overflow-hidden">
+      <NatureBackground treeSide="both" treeOpacity={0.06} river="top" />
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { NatureBackground } from "@/components/nature-decor";
 
 const baseFeatures = [
   "Baidarė (2 vietų)",
@@ -29,8 +30,9 @@ const pricingPlans = [
 
 export function PricingSection() {
   return (
-    <section id="kainos" className="relative py-24 md:py-32">
-      <div className="container mx-auto px-4">
+    <section id="kainos" className="relative py-24 md:py-32 overflow-hidden">
+      <NatureBackground treeSide="both" treeOpacity={0.06} river="top" />
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section header */}
         <motion.div
           className="text-center mb-16"

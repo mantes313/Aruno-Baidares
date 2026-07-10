@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Skill(run)",
-      "Skill(run:*)"
+      "Skill(run:*)",
+      "Bash(curl -s -o /dev/null -w \"homepage: %{http_code}\\\\n\" https://6upe.lt/)",
+      "Bash(curl -s https://6upe.lt/api/booked-dates)"
     ]
   }
 }

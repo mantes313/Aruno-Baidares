@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Waves, Shield, Package } from "lucide-react";
+import { NatureBackground } from "@/components/nature-decor";
 
 const equipment = [
   {
@@ -26,8 +27,9 @@ const equipment = [
 
 export function EquipmentSection() {
   return (
-    <section id="iranga" className="relative py-24 md:py-32">
-      <div className="container mx-auto px-4">
+    <section id="iranga" className="relative py-24 md:py-32 overflow-hidden">
+      <NatureBackground treeSide="left" river="top" />
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section header */}
         <motion.div
           className="text-center mb-16"
@@ -85,16 +87,6 @@ export function EquipmentSection() {
             </motion.div>
           ))}
         </div>
-
-        {/* Additional equipment note */}
-        <motion.div
-          className="mt-12 text-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-        </motion.div>
       </div>
     </section>
   );

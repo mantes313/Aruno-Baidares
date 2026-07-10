@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Clock, MapPin, Gauge, ArrowRight, X, ZoomIn } from "lucide-react";
 import { useState } from "react";
+import { NatureBackground } from "@/components/nature-decor";
 
 const routes = [
   {
@@ -41,8 +42,9 @@ export function RoutesSection() {
   const [modalRoute, setModalRoute] = useState<typeof routes[0] | null>(null);
 
   return (
-    <section id="marsrutai" className="relative py-24 md:py-32 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="marsrutai" className="relative py-24 md:py-32 bg-muted/30 overflow-hidden">
+      <NatureBackground treeSide="right" river="top" />
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section header */}
         <motion.div
           className="text-center mb-16"
